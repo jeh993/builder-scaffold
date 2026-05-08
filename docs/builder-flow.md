@@ -57,7 +57,7 @@ SUI_NETWORK = testnet or localnet
 After publishing the extension package, automatically sync deployment artifacts into .env:
 
 `pnpm sync-builder-env <network>`
-# Example:
+### Example:
 `pnpm sync-builder-env localnet`
 
 This command reads:
@@ -73,7 +73,7 @@ and updates:
 - EXTENSION_CONFIG_ID
 - SUI_NETWORK
 
-# Important
+### Important
 
 Do not publish extensions with:
 
