@@ -75,7 +75,7 @@ and updates:
 
 Do not publish extensions with:
 
-`--with-unpublished-dependencies
+`--with-unpublished-dependencies`
 
 when World has already been deployed.
 
