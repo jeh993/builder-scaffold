@@ -56,13 +56,14 @@ SUI_NETWORK = testnet or localnet
 
 After publishing the extension package, automatically sync deployment artifacts into .env:
 
-pnpm sync-builder-env <network>
+`pnpm sync-builder-env <network>`
 # Example:
-pnpm sync-builder-env localnet
+`pnpm sync-builder-env localnet`
 
 This command reads:
 
-```deployments/<network>/extracted-object-ids.json
+```
+deployments/<network>/extracted-object-ids.json
 deployments/<network>/publish-output.json
 ```
 
