@@ -62,8 +62,9 @@ pnpm sync-builder-env localnet
 
 This command reads:
 
-deployments/<network>/extracted-object-ids.json
+```deployments/<network>/extracted-object-ids.json
 deployments/<network>/publish-output.json
+```
 
 and updates:
 - WORLD_PACKAGE_ID
