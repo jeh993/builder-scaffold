@@ -66,17 +66,16 @@ deployments/<network>/extracted-object-ids.json
 deployments/<network>/publish-output.json
 
 and updates:
+- WORLD_PACKAGE_ID
+- BUILDER_PACKAGE_ID
+- EXTENSION_CONFIG_ID
+- SUI_NETWORK
 
-WORLD_PACKAGE_ID
-BUILDER_PACKAGE_ID
-EXTENSION_CONFIG_ID
-SUI_NETWORK
-
-Important
+# Important
 
 Do not publish extensions with:
 
---with-unpublished-dependencies
+`--with-unpublished-dependencies
 
 when World has already been deployed.
 
