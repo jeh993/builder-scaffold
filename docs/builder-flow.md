@@ -49,19 +49,40 @@ cd ../../
 # From builder scaffold root 
 cp .env.example .env
 ```
+Set the following keys in .env:
 
-Set in .env:
+Use the same keys/addresses used during world deployment
+SUI_NETWORK = testnet or localnet
 
-- Same keys/addresses as used for world deployment
-- `SUI_NETWORK`=testnet or localnet
-- `WORLD_PACKAGE_ID`— from deployments/<network>/extracted-object-ids.json (world.packageId)
-- Set `BUILDER_PACKAGE_ID` and `EXTENSION_CONFIG_ID` in `.env` from the publish output.
+After publishing the extension package, automatically sync deployment artifacts into .env:
 
-Those values are in the output of the publish command:
-1. `BUILDER_PACKAGE_ID` = changed_objects.objectId where objectType === "package"
-2. `EXTENSION_CONFIG_ID` = changed_objects.objectId where objectType ends with "config::ExtensionConfig"
+pnpm sync-builder-env <network>
+# Example:
+pnpm sync-builder-env localnet
 
-<a id="run-scripts"></a>
+This command reads:
+
+deployments/<network>/extracted-object-ids.json
+deployments/<network>/publish-output.json
+
+and updates:
+
+WORLD_PACKAGE_ID
+BUILDER_PACKAGE_ID
+EXTENSION_CONFIG_ID
+SUI_NETWORK
+
+Important
+
+Do not publish extensions with:
+
+--with-unpublished-dependencies
+
+when World has already been deployed.
+
+Doing so may republish World dependencies into a new package ID, causing confusing Move type mismatch errors later when interacting with existing Gate, Character, and other World objects.
+
+The sync utility also validates the publish output and warns if the extension publish appears to contain World modules unexpectedly.
 
 ## Interact with Custom Contract
 
