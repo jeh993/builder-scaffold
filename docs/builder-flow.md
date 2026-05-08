@@ -51,8 +51,8 @@ cp .env.example .env
 ```
 Set the following keys in .env:
 
-Use the same keys/addresses used during world deployment
-SUI_NETWORK = testnet or localnet
+- Use the same keys/addresses used during world deployment
+- `SUI_NETWORK` = `testnet` or `localnet`
 
 After publishing the extension package, automatically sync deployment artifacts into .env:
 
