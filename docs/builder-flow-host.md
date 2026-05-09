@@ -104,6 +104,7 @@ cp env.example .env
 # GOVERNOR_PRIVATE_KEY is optional or can be the same as ADMIN_PRIVATE_KEY
 pnpm install
 pnpm deploy-world localnet       # or testnet
+pnpm sync-env localnet           # or testnet
 pnpm configure-world localnet    # or testnet
 pnpm create-test-resources localnet   # or testnet
 ```
