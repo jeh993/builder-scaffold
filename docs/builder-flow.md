@@ -37,7 +37,7 @@ cd move-contracts/smart_gate_extension   # or storage_unit_extension, or your pa
 - **Localnet:**  
   `sui client test-publish --build-env testnet --pubfile-path ../../deployments/localnet/Pub.localnet.toml --json | tee ../../deployments/localnet/publish-output.json`
 - **Testnet:**  
-  `sui client publish -e testnet`
+  `sui client publish --json > ../../deployments/testnet/publish-output.json`
 
 
 <a id="configure-builder-scaffold-env"></a>
